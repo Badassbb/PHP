@@ -174,7 +174,7 @@ for ($m=0; $m <= 10; $m++) {
        //création d'un tableau
            echo "<tr>";
            //création d'une ligne
-               echo "<td colspan="4">$affichage</td>";
+               echo "<td colspan=\"4\">$affichage</td>";
                // création d'une cellule de 4 colonnes
            echo "</tr>";
            //array_chunk-- Divise un tableau en morceaux
