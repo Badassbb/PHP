@@ -169,7 +169,7 @@ for ($m=0; $m <= 10; $m++) {
        $affichage.=eval("return $stock;");//eval — Exécute une chaîne comme un script PHP
    }
    //Formulaire de sortie
-   echo "<form action="" method="POST">";
+   echo "<form action=\"\" method=\"POST\">";
        echo "<table>";
        //création d'un tableau
            echo "<tr>";
