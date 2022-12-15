@@ -22,8 +22,20 @@ include_once("inc\head.inc.php");
 </section>
 
 <section>
+    <h1>Le PHP</h1>
 <article class="art_1">
-<h2>Qu'est ce qu'un site dynamique</h2>
+<h2>La calculatrice</h2>
+<p>j'ai créé une variable que j'ai nommés bouton "button", laquelle initie un tableau.
+    j'ai créé une variable cliqué, qui récupère l'information à savoir : si le bouton est cliqué et vérifie si le button a été cliqué ou pas avec in Array.
+    puis j'ai créé un variable qui stock les données ces données sont alors vérifiées et toujours stocké dans le $out.
+    je crée une fonction affichage qui est le résultat de ce qui a été cliqué.
+    je crée une fonction reset qui va remettre à zero l'écran d'affichage de ma calculatrice :
+    si tu appui sur C alors affichage = "rien".
+    sinon si alors tu execute la chaine de caractère comme un script "eval";
+    soit ce qu'il y a de stocké dans la valeur retourné de stock (out)
+    puis enfin j'ai constitué un formulaire tableau qui incrémente en fonction des différentes variables.
+</p>
+
 
 </article>
 </section>

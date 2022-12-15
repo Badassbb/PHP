@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+<?php
+include_once("inc\head.inc.php");
+?>
 <h2 class="titre_exe">Exercice 1</h2><br> 
 <div class="exe_1">
 <p>Écrivez un programme pour afficher le nombre, de 4 à 12 en utilisant la boucle PHP. Vous pouvez utiliser soit la boucle « for » ou « while »</p>
@@ -100,7 +91,7 @@ $facto = factorisation($nbr);
 echo "La factorielle de $nbr est $facto"; 
 ?>
 
-<h2 class="titre_exe">Exercice 7</h2><br> 
+<h2 class="titre_exe">Exercice 8</h2><br> 
 <div class="exe_7">
 <p>Écrivez un programme pour afficher le triangle d’etoile suivant en utilisant une boucle for.</p>
 </div>
@@ -121,7 +112,7 @@ for ($l = 0; $l < $g; $l++)
 }
 ?>
 
-<h2 class="titre_exe">Exercice 8</h2><br> 
+<h2 class="titre_exe">Exercice 9</h2><br> 
 <div class="exe_8">
 <p>Écrivez pour afficher la table de multiplication 5 * 5</p>
 </div>
@@ -142,16 +133,18 @@ for ($m=0; $m <= 10; $m++) {
 
 <h2 class="titre_exe">Exercice 10</h2><br> 
 <div class="exe_10">
-<p>La calculatrice</p>
+<p>Réaliser une calculatrice en php</p>
 </div>
 
 <?php
    $button=[1,2,3,'+',4,5,6,'-',7,8,9,'*','C',0,'.','/','=']; //Tableau = array variable
+   // Je créer une variable button et j'y affecte un tableau avec tout les boutons et valeurs d'on j'ai besoin 
    $cliqué='';// bouton cliqué sur une variable vide
-   //vérifie la variable cliqué et vérifie la variable du tableau avec la fonction in_array
    if(isset($_POST['cliqué']) && in_array($_POST['cliqué'],$button)){
-    // détermine si la variable est différent de null et in_array — Indique si une valeur appartient à un tableau
+       //vérifie la variable cliqué et vérifie quelle button et cliqué de ma variable button du tableau est cliqué avec la fonction in_array
+    // inset détermine si la variable est différent de null et in_array — Indique si une valeur appartient à un tableau en l'ocurrence là $button
        $cliqué=$_POST['cliqué'];
+       //_post renvoi l'information comme quoi il y a eu clique en JS sauf erreur cela serait "target-e du tableau d'event-mouse"
    }
    $stock='';//stock la valeur dans la variable $cliqué et stockées dans une variable vide
    /*vérifie la variable $stock et vérifie la fonction du tableau preg_match effectue une recherche de correspondance avec une expression rationnelle standard.
@@ -163,7 +156,7 @@ for ($m=0; $m <= 10; $m++) {
    *$ aux extrémités.
    */
    if(isset($_POST['stock']) && preg_match('~^(?:[\d.]+[*/+-]?)+$~',$_POST['stock'],$out)){
-       $stock=$out[0]; //preg_match — Effectue une recherche de correspondance avec une expression rationnelle standard
+       $stock=$out[0]; //preg_match — Effectue une recherche de correspondance avec une expression rationnelle standard et le stock dans la variable $out qui est egal à stock.
        //si détermine si la valeur de stock et null ou pas et effectue la recherche si des operateurs en partant du début du tableau out ont étés stocké les stock dans $out.
    }
    $affichage=$stock.$cliqué;// afficher la valeur et les opérateurs et transmets l'unité à affichage soit stock + ce qui a été cliqué
@@ -176,12 +169,12 @@ for ($m=0; $m <= 10; $m++) {
        $affichage.=eval("return $stock;");//eval — Exécute une chaîne comme un script PHP
    }
    //Formulaire de sortie
-   echo "<form action=\"\" method=\"POST\">";
+   echo "<form action="" method="POST">";
        echo "<table>";
        //création d'un tableau
            echo "<tr>";
            //création d'une ligne
-               echo "<td colspan=\"4\">$affichage</td>";
+               echo "<td colspan="4">$affichage</td>";
                // création d'une cellule de 4 colonnes
            echo "</tr>";
            //array_chunk-- Divise un tableau en morceaux
@@ -204,4 +197,11 @@ for ($m=0; $m <= 10; $m++) {
        // affiche les éléments dans le input renvoyé par la variable $affichage.
    echo "</form>";
    //fermeture du formulaire
+
+   // en résumé je comprends bien l'histoire mais je sais pas l'écrire
    ?>
+<?php
+include_once("inc/footer.inc.php");
+?>
+</body>
+</html>
