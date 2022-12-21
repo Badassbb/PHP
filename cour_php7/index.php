@@ -5,6 +5,19 @@ declare(strict_types=1);
 ?>
 
 <?php
+$x = 8;
+$y = 4;
+
+$addition = $x + $y;
+
+echo "$addition <br>";
+
+$lastName = array("John", "Morgan", "Silver", "Jack");
+var_dump($lastName);
+?>
+
+<?= "Ceci est une ecriture courte de echo <br>" ?>
+<?php
 /*    
    $x = "Hello, moi c'est John"; //string
     $y = true; //bolean
@@ -24,79 +37,79 @@ declare(strict_types=1);
     //echo $x;
     var_dump($x, $y, $v, $w, $a, $maVoiture, $b); //renseigne sur le type de la variable interroger.
     */
-/*
-
-    $x = "le Site apprendre-a-coder.com c'est de la balle !";
-
-    echo strlen($x); //compte de nombre de lettres soit 50 puisque la premiere lettre et 0
-    echo str_word_count($x); // compte le nombre de mot
-    echo strrev($x);
-    echo strpos($x, "bille");
-
-    $var1 = "apprendre à cuir";
-    $var2 = "apprendre à apprendre";
-    $var3 = "apprendre à kagué";
-
-    str_replace($var1, $var2, $var3);
 
 
-    define("Mon_URL", "http://apprendre-a-coder.com"); // definie une constante
+$x = "le Site apprendre-a-coder.com c'est de la balle !";
 
-    echo "Le site " . Mon_URL . "c'est de la balle !";
+echo strlen($x); //compte de nombre de lettres soit 50 puisque la premiere lettre et 0
+echo str_word_count($x); // compte le nombre de mot
+echo strrev($x);
+echo strpos($x, "bille");
 
-    $maCouleur = $Bleu ?? $rouge ?? $orange ?? "pas de couleur"; // ?? vérifie si la couleur est définie préalablement si non il passe au suivant. 
-    echo  $maCouleur;
-    echo "<br>";
-    $x = 10;
-    $y = 2;
-    $a = 5;
-    $b = 5;
-    $c = 10;
-    $d = 20;
+$var1 = "apprendre à cuir";
+$var2 = "apprendre à apprendre";
+$var3 = "apprendre à kagué";
 
-    echo $x <=> $y; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
-    echo "<br>";
-    echo $a <=> $b; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
-    echo "<br>";
-    echo $c <=> $d; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
-    echo "<br>";
+str_replace($var1, $var2, $var3);
 
-    echo $x <> $y; // true si $a est différent de $b après le transtypage.
 
-    echo "<br>";
-    echo $x > 10 and $y < 3;
+define("Mon_URL", "http://apprendre-a-coder.com"); // definie une constante
 
-    //$x .= $y //
+echo "Le site " . Mon_URL . "c'est de la balle !";
 
-    //condition if / else if / else
+$maCouleur = $Bleu ?? $rouge ?? $orange ?? "pas de couleur"; // ?? vérifie si la couleur est définie préalablement si non il passe au suivant. 
+echo  $maCouleur;
+echo "<br>";
+$x = 10;
+$y = 2;
+$a = 5;
+$b = 5;
+$c = 10;
+$d = 20;
 
-    $motivation = 8;
+echo $x <=> $y; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
+echo "<br>";
+echo $a <=> $b; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
+echo "<br>";
+echo $c <=> $d; // opérateur de comparaison Un entier inférieur, égal ou supérieur à zéro lorsque $a est inférieur, égal, ou supérieur à $b respectivement.
+echo "<br>";
 
-    if ($motivation < 3) {
-        echo "Oulala, il faut se motiver";
-    } else if ($motivation <= 7) {
-        echo "allez courage, tu vas y arrivé";
-    } else {
-        echo "C'est génial ! Continues...";
-    }
+echo $x <> $y; // true si $a est différent de $b après le transtypage.
 
-    $objectif = "";
-    switch ($objectif) {
-        case "travailler en Freelance":
-            echo "Freelance, c'est génial !";
-            break;
-        case "travailler de la maison":
-            echo "Ta raison c'est de la balle !";
-            break;
-        case "coder mon site Web":
-            echo "bonne chance !";
-            break;
-        default:
-            echo "choisis un objectif";
-    }
-    // Boucles
-    $x = 0;
-*/
+echo "<br>";
+echo $x > 10 and $y < 3;
+
+//$x .= $y //
+
+//condition if / else if / else
+
+$motivation = 8;
+
+if ($motivation < 3) {
+    echo "Oulala, il faut se motiver";
+} else if ($motivation <= 7) {
+    echo "allez courage, tu vas y arrivé";
+} else {
+    echo "C'est génial ! Continues...";
+}
+
+$objectif = "";
+switch ($objectif) {
+    case "travailler en Freelance":
+        echo "Freelance, c'est génial !";
+        break;
+    case "travailler de la maison":
+        echo "Ta raison c'est de la balle !";
+        break;
+    case "coder mon site Web":
+        echo "bonne chance !";
+        break;
+    default:
+        echo "choisis un objectif";
+}
+// Boucles
+$x = 0;
+
 /*
     while ($x <= 10) /*condition*/ /*{
         echo "La valeur de x est : $x <br>";
@@ -194,4 +207,38 @@ foreach ($personnes as $nom => $age) {
 }
 //var_dump($personnes);
 
+class Etudiant
+{ // je crée un Objet Etudiant
+    public $etudie = true;
+    public $nom; // je crée une propriétée nom
+    public $age; // je crée une propriétée age
+    public $notes; // je crée une propriétée notes
+
+    public function __construct($nom, $age, $notes) // fonction constructeur qui instantie la création d'un objet et qui permet de pouvoir renseigner plusieurs objets.
+    {
+        $this->nom = $nom;
+        $this->age = $age;
+        $this->notes = $notes;
+    }
+    public function sePresente()
+    {
+        if ($this->etudie) {
+            echo "Je m'appelle $this->nom et j'ai $this->age ans.<br>";
+            foreach ($this->notes as $matiere => $notes) {
+                echo "En $matiere, j'ai obtenu $notes/20.<br>";
+            }
+        }
+    }
+}
+$notesJohn = array("Maths" => 17, "Français" => 9, "Anglais" => 12);
+
+$John = new Etudiant("John", "8", $notesJohn);
+
+$John->sePresente();
+
+$notesBenjamin = array("Maths" => 17, "Français" => 12, "Anglais" => 15, "PHP" => 12, "HTML/CSS" => 15);
+$Benjamin = new Etudiant("Benjamin", "42", $notesBenjamin);
+
+
+$Benjamin->sePresente();
 ?>
