@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,10 +16,10 @@
 <body>
 
     <p>
-    <h1><?php
-        echo "Hello moi c'est " . $_GET['nom'] . " et j'ai " . $_GET['age'] . " ans"
-
-        ?></h1>
+    <h1>Hello, ton nom c'est <?php echo $_SESSION['nom'] ?>
+        <?php //echo "Hello moi c'est " . $_GET['nom'] . " et j'ai " . $_GET['age'] . " ans" 
+        ?>
+    </h1>
     </p>
 </body>
 
